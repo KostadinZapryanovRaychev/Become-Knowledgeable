@@ -62,12 +62,12 @@
     },
     {
       "id": 6,
-      "question": "Каква стойност има bool променлива по подразбиране?",
+      "question": "Как се извежда текст в конзолата в C#?",
       "answers": [
-        "true",
-        "false",
-        "0",
-        "null"
+        "print()",
+        "Console.WriteLine()",
+        "echo()",
+        "log()"
       ],
       "correct": 1,
       "difficulty": 5
@@ -122,12 +122,12 @@
     },
     {
       "id": 11,
-      "question": "Как се извежда текст в конзолата в C#?",
+      "question": "Каква стойност има bool променлива по подразбиране?",
       "answers": [
-        "print()",
-        "Console.WriteLine()",
-        "echo()",
-        "log()"
+        "true",
+        "false",
+        "0",
+        "null"
       ],
       "correct": 1,
       "difficulty": 10
@@ -151,7 +151,7 @@
         "arr[arr.Length]",
         "arr[arr.Length - 1]",
         "arr[last]",
-        "arr[-1]"
+        "arr[arr.Length] - 1"
       ],
       "correct": 1,
       "difficulty": 12
