@@ -1,0 +1,184 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Какво означава HTML?",
+      "answers": [
+        "HyperText Markup Language",
+        "High Tech Modern Language",
+        "Home Tool Markup Language",
+        "Hyperlinks and Text Markup Language"
+      ],
+      "correct": 0,
+      "difficulty": 0
+    },
+    {
+      "id": 2,
+      "question": "Кой е създателят на JavaScript?",
+      "answers": [
+        "Guido van Rossum",
+        "Brendan Eich",
+        "Bjarne Stroustrup",
+        "Dennis Ritchie"
+      ],
+      "correct": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 3,
+      "question": "Какво е CSS използвано за?",
+      "answers": [
+        "За подредба на веб страницата",
+        "За осъществяване на логиката на програмата",
+        "За съхранение на данни",
+        "За управление на сървъра"
+      ],
+      "correct": 0,
+      "difficulty": 2
+    },
+    {
+      "id": 4,
+      "question": "Какъв е резултатът на 2 + 2 * 2 в повечето програмни езици?",
+      "answers": [
+        "8",
+        "6",
+        "4",
+        "неопределено"
+      ],
+      "correct": 1,
+      "difficulty": 3
+    },
+    {
+      "id": 5,
+      "question": "Кой от следните е най-бързият начин за сортиране?",
+      "answers": [
+        "Bubble Sort",
+        "Quick Sort",
+        "Selection Sort",
+        "Insertion Sort"
+      ],
+      "correct": 1,
+      "difficulty": 4
+    },
+    {
+      "id": 6,
+      "question": "Какво е SQL?",
+      "answers": [
+        "Structured Query Language",
+        "System Query Logic",
+        "Secure Query Language",
+        "Standard Quick List"
+      ],
+      "correct": 0,
+      "difficulty": 5
+    },
+    {
+      "id": 7,
+      "question": "Какво е Big O нотацията използвана за?",
+      "answers": [
+        "За измерване на памет",
+        "За описване на времева сложност",
+        "За брой на редовете код",
+        "За измерване на процесорна мощност"
+      ],
+      "correct": 1,
+      "difficulty": 6
+    },
+    {
+      "id": 8,
+      "question": "Кой проектен модел следва MVC архитектурата?",
+      "answers": [
+        "Монолитен модел",
+        "Model-View-Controller",
+        "Master-Vault-Client",
+        "Memory-Value-Cache"
+      ],
+      "correct": 1,
+      "difficulty": 7
+    },
+    {
+      "id": 9,
+      "question": "Какво е рекурсия в програмирането?",
+      "answers": [
+        "Функция, която повтаря код много пъти",
+        "Функция, която се вызывает сама на себе",
+        "Процес на изтриване на данни",
+        "Метод за сортиране"
+      ],
+      "correct": 1,
+      "difficulty": 8
+    },
+    {
+      "id": 10,
+      "question": "Какво е REST API?",
+      "answers": [
+        "Релационна база данни",
+        "Архитектурен стил за мрежови приложения",
+        "Програмен език",
+        "Система за управление на памет"
+      ],
+      "correct": 1,
+      "difficulty": 9
+    },
+    {
+      "id": 11,
+      "question": "Какво е SOLID принципа в ООП?",
+      "answers": [
+        "Начин за оптимизиране на базата данни",
+        "Набор от дизайнерски принципи за написване на качествен код",
+        "Метод за сигурност на данни",
+        "Система за управление на проекти"
+      ],
+      "correct": 1,
+      "difficulty": 10
+    },
+    {
+      "id": 12,
+      "question": "Какво е полиморфизма в обектно-ориентираното програмиране?",
+      "answers": [
+        "Способност на обект да бъде от множество типове",
+        "Процес на разделяне на код",
+        "Метод за шифроване на данни",
+        "Система за управление на памет"
+      ],
+      "correct": 0,
+      "difficulty": 11
+    },
+    {
+      "id": 13,
+      "question": "Какво е разликата между git pull и git fetch?",
+      "answers": [
+        "Няма разлика",
+        "pull - теглене и сливане, fetch - само теглене",
+        "fetch - теглене и сливане, pull - само теглене",
+        "pull е за локални, fetch е за отдалечени хранилища"
+      ],
+      "correct": 1,
+      "difficulty": 12
+    },
+    {
+      "id": 14,
+      "question": "Какво е сложност O(log n) в Big O?",
+      "answers": [
+        "Линейна сложност",
+        "Логаритмична сложност - много бърза",
+        "Експоненциална сложност",
+        "Квадратична сложност"
+      ],
+      "correct": 1,
+      "difficulty": 13
+    },
+    {
+      "id": 15,
+      "question": "Какво е design pattern Factory Pattern?",
+      "answers": [
+        "Начин за организиране на файлове",
+        "Проектен модел за създаване на обекти без конкретни класове",
+        "Метод за управление на памет",
+        "Система за логване на грешки"
+      ],
+      "correct": 1,
+      "difficulty": 14
+    }
+  ]
+}

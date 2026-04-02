@@ -1,0 +1,142 @@
+.prize-level {
+  background: white;
+  border-radius: clamp(8px, 1.5vw, 10px);
+  border: 2px solid #667eea;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.prize-level h3 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: clamp(12px, 2vw, 15px);
+  margin: 0;
+  font-size: clamp(0.95em, 2vw, 1.05em);
+  text-align: center;
+  word-break: break-word;
+}
+
+.prize-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: clamp(8px, 1vw, 10px);
+  max-height: 500px;
+}
+
+.prize-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(8px, 1.5vw, 10px) clamp(10px, 2vw, 12px);
+  border-radius: 8px;
+  margin-bottom: 5px;
+  background: #f9f9f9;
+  border-left: 3px solid #ddd;
+  transition: all 0.3s ease;
+  font-size: clamp(0.8em, 1.8vw, 0.9em);
+  gap: 10px;
+}
+
+.prize-item.passed {
+  background: #E8F5E9;
+  border-left-color: #4CAF50;
+  opacity: 0.7;
+}
+
+.prize-item.current {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-left-color: #667eea;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+  transform: scale(1.02);
+}
+
+.level-number {
+  font-weight: bold;
+  color: inherit;
+  min-width: 25px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.prize-amount {
+  color: #FFD700;
+  font-weight: bold;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.prize-item.current .prize-amount {
+  color: #FFD700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.prize-item.passed .prize-amount {
+  color: #4CAF50;
+  font-weight: normal;
+}
+
+/* Scrollbar styling */
+.prize-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.prize-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.prize-list::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.prize-list::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
+@media (max-width: 1024px) {
+  .prize-level {
+    margin-bottom: 20px;
+  }
+
+  .prize-list {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prize-level h3 {
+    font-size: 0.95em;
+    padding: 10px;
+  }
+
+  .prize-list {
+    max-height: 250px;
+    padding: 8px;
+  }
+
+  .prize-item {
+    padding: 8px 10px;
+    font-size: 0.85em;
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prize-list {
+    max-height: 200px;
+  }
+
+  .prize-item {
+    padding: 6px 8px;
+    font-size: 0.8em;
+  }
+
+  .level-number {
+    min-width: 20px;
+  }
+}
