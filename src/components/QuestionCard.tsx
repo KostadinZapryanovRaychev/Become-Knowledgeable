@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import '../styles/QuestionCard.css'
 
 interface QuestionCardProps {
@@ -15,10 +16,47 @@ export default function QuestionCard({
   onAnswer,
   difficulty
 }: QuestionCardProps) {
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
+  const [answerState, setAnswerState] = useState<'pending' | 'correct' | 'wrong' | null>(null)
+
   const getDifficultyColor = (level: number) => {
     if (level < 5) return '#4CAF50'
     if (level < 10) return '#FF9800'
     return '#F44336'
+  }
+
+  const handleAnswerClick = (index: number) => {
+    if (selectedAnswer !== null) return
+    
+    setSelectedAnswer(index)
+    setAnswerState('pending')
+
+    setTimeout(() => {
+      const isCorrect = index === 0
+      setAnswerState(isCorrect ? 'correct' : 'wrong')
+      
+      setTimeout(() => {
+        onAnswer(index)
+        setSelectedAnswer(null)
+        setAnswerState(null)
+      }, 800)
+    }, 1500)
+  }
+
+  const getButtonClass = (index: number) => {
+    let classes = `answer-btn ${visibleAnswers.includes(index) ? '' : 'hidden'}`
+    
+    if (selectedAnswer === index) {
+      if (answerState === 'pending') {
+        classes += ' selected-pending'
+      } else if (answerState === 'correct') {
+        classes += ' selected-correct'
+      } else if (answerState === 'wrong') {
+        classes += ' selected-wrong'
+      }
+    }
+    
+    return classes
   }
 
   return (
@@ -33,9 +71,9 @@ export default function QuestionCard({
         {answers.map((answer, index) => (
           <button
             key={index}
-            className={`answer-btn ${visibleAnswers.includes(index) ? '' : 'hidden'}`}
-            onClick={() => onAnswer(index)}
-            disabled={!visibleAnswers.includes(index)}
+            className={getButtonClass(index)}
+            onClick={() => handleAnswerClick(index)}
+            disabled={!visibleAnswers.includes(index) || selectedAnswer !== null}
           >
             <span className="answer-letter">
               {String.fromCharCode(65 + index)}

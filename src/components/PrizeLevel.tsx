@@ -17,7 +17,7 @@ export default function PrizeLevel({ levels, currentLevel, score }: PrizeLevelPr
             className={`prize-item ${index === currentLevel ? 'current' : ''} ${index < currentLevel ? 'passed' : ''}`}
           >
             <span className="level-number">{index + 1}</span>
-            <span className="prize-amount">{level.toLocaleString('bg-BG')} лв.</span>
+            <span className="prize-amount">{level.toLocaleString('bg-BG')}</span>
           </div>
         ))}
       </div>

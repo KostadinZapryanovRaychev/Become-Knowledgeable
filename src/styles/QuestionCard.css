@@ -74,13 +74,79 @@
 }
 
 .answer-btn:disabled {
-  opacity: 0.4;
+  opacity: 0.6;
   cursor: not-allowed;
   pointer-events: none;
 }
 
 .answer-btn.hidden {
   display: none;
+}
+
+/* Yellow state - when answer is selected (pending) */
+.answer-btn.selected-pending {
+  background: linear-gradient(135deg, #FFF9C4 0%, #FFF176 100%);
+  border-color: #FBC02D;
+  color: #F57F17;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(251, 192, 45, 0.4);
+  animation: pulseYellow 1.5s ease-in-out forwards;
+}
+
+@keyframes pulseYellow {
+  0%, 100% {
+    box-shadow: 0 6px 20px rgba(251, 192, 45, 0.4);
+  }
+  50% {
+    box-shadow: 0 10px 30px rgba(251, 192, 45, 0.6);
+  }
+}
+
+/* Green state - when answer is correct */
+.answer-btn.selected-correct {
+  background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%);
+  border-color: #43A047;
+  color: #1B5E20;
+  font-weight: 700;
+  box-shadow: 0 8px 25px rgba(67, 160, 71, 0.5);
+  animation: slideInCorrect 0.8s ease-out forwards;
+}
+
+@keyframes slideInCorrect {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 8px 25px rgba(67, 160, 71, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 8px 25px rgba(67, 160, 71, 0.5);
+  }
+}
+
+/* Red state - when answer is wrong */
+.answer-btn.selected-wrong {
+  background: linear-gradient(135deg, #FFCDD2 0%, #EF9A9A 100%);
+  border-color: #D32F2F;
+  color: #B71C1C;
+  font-weight: 700;
+  box-shadow: 0 8px 25px rgba(211, 47, 47, 0.5);
+  animation: shakeWrong 0.8s ease-out forwards;
+}
+
+@keyframes shakeWrong {
+  0%, 100% {
+    transform: translateX(0);
+    box-shadow: 0 8px 25px rgba(211, 47, 47, 0.3);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-8px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(8px);
+  }
 }
 
 .answer-letter {
