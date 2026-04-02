@@ -5,13 +5,17 @@ import StartScreen from './components/StartScreen'
 
 function App() {
   const [gameStarted, setGameStarted] = useState(false)
+  const [playerName, setPlayerName] = useState('')
 
   return (
     <div className="app">
       {!gameStarted ? (
-        <StartScreen onStart={() => setGameStarted(true)} />
+        <StartScreen onStart={(name: string) => {
+          setPlayerName(name)
+          setGameStarted(true)
+        }} />
       ) : (
-        <QuizGame onEnd={() => setGameStarted(false)} />
+        <QuizGame onEnd={() => setGameStarted(false)} playerName={playerName} />
       )}
     </div>
   )

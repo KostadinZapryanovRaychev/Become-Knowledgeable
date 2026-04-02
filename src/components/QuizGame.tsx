@@ -15,11 +15,12 @@ interface Question {
 
 interface QuizGameProps {
   onEnd: () => void
+  playerName: string
 }
 
 const PRIZE_LEVELS = [2.0, 2.1, 2.3, 2.4, 2.6, 2.7, 2.9, 3.0, 3.4, 3.9, 4.3, 4.7, 5.1, 5.6, 6.0]
 
-export default function QuizGame({ onEnd }: QuizGameProps) {
+export default function QuizGame({ onEnd, playerName }: QuizGameProps) {
   const [currentLevel, setCurrentLevel] = useState(0)
   const [score, setScore] = useState(0)
   const [gameOver, setGameOver] = useState(false)
@@ -130,6 +131,7 @@ export default function QuizGame({ onEnd }: QuizGameProps) {
       <div className="game-container">
         <div className="game-header">
           <h1>Станете Знаеща Личност</h1>
+          <div className="player-info">Играч: <span>{playerName}</span></div>
           <div className="score-info">
             <div className="current-prize">
               Текуща Оценка: <span>{score.toFixed(1)}</span>
@@ -179,9 +181,19 @@ export default function QuizGame({ onEnd }: QuizGameProps) {
             ) : (
               <div className="game-over">
                 <p className="game-over-message">{message}</p>
-                <div className="final-score">
-                  <p>Финална Оценка:</p>
-                  <h2>{score.toFixed(1)}</h2>
+                <div className="final-certificate">
+                  <div className="certificate-header">Сертификат</div>
+                  <div className="certificate-body">
+                    <p className="certificate-text">Този сертификат се издава на</p>
+                    <p className="player-name-cert">{playerName}</p>
+                    <p className="certificate-text">за успешното завършване на курса</p>
+                    <p className="course-name">Станете Знаеща Личност</p>
+                    <div className="final-score">
+                      <p>Финална Оценка:</p>
+                      <h2>{score.toFixed(1)}</h2>
+                    </div>
+                    <p className="certificate-date">{new Date().toLocaleDateString('bg-BG')}</p>
+                  </div>
                 </div>
                 <button className="restart-btn" onClick={onEnd}>
                   Главно Меню

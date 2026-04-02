@@ -2,12 +2,12 @@
   "questions": [
     {
       "id": 1,
-      "question": "Какво означава HTML?",
+      "question": "Кой от изброените типове е примитивен (value type) в C#?",
       "answers": [
-        "HyperText Markup Language",
-        "High Tech Modern Language",
-        "Home Tool Markup Language",
-        "Hyperlinks and Text Markup Language"
+        "int",
+        "string",
+        "object",
+        "array"
       ],
       "correct": 0,
       "difficulty": 0
