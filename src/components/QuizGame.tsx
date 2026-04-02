@@ -148,6 +148,7 @@ export default function QuizGame({ onEnd, playerName }: QuizGameProps) {
                   visibleAnswers={visibleAnswers}
                   onAnswer={handleAnswer}
                   difficulty={currentLevel}
+                  correct={currentQuestion.correct}
                 />
 
                 {showCoworkerResult && coworkerSuggestion !== null && (

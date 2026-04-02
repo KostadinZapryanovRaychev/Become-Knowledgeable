@@ -7,6 +7,7 @@ interface QuestionCardProps {
   visibleAnswers: number[]
   onAnswer: (index: number) => void
   difficulty: number
+  correct: number
 }
 
 export default function QuestionCard({
@@ -14,7 +15,8 @@ export default function QuestionCard({
   answers,
   visibleAnswers,
   onAnswer,
-  difficulty
+  difficulty,
+  correct
 }: QuestionCardProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
   const [answerState, setAnswerState] = useState<'pending' | 'correct' | 'wrong' | null>(null)
@@ -32,7 +34,7 @@ export default function QuestionCard({
     setAnswerState('pending')
 
     setTimeout(() => {
-      const isCorrect = index === 0
+      const isCorrect = index === correct
       setAnswerState(isCorrect ? 'correct' : 'wrong')
       
       setTimeout(() => {
