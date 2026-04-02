@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/QuestionCard.css'
 
 interface QuestionCardProps {
@@ -35,6 +35,7 @@ export default function QuestionCard({
 
     setTimeout(() => {
       const isCorrect = index === correct
+      console.log(`Answer clicked: index=${index}, correct=${correct}, isCorrect=${isCorrect}`)
       setAnswerState(isCorrect ? 'correct' : 'wrong')
       
       setTimeout(() => {
