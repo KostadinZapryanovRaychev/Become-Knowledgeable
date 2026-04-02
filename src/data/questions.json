@@ -14,26 +14,26 @@
     },
     {
       "id": 2,
-      "question": "Кой е създателят на JavaScript?",
+      "question": "Как се достъпва първият елемент на масив в C#?",
       "answers": [
-        "Guido van Rossum",
-        "Brendan Eich",
-        "Bjarne Stroustrup",
-        "Dennis Ritchie"
+        "arr[1]",
+        "arr.first()",
+        "arr(0)",
+        "arr[0]"
       ],
-      "correct": 1,
+      "correct": 3,
       "difficulty": 1
     },
     {
       "id": 3,
-      "question": "Какво е CSS използвано за?",
+      "question": "Кой тип данни използваме когато ни трябва да описваме пари?",
       "answers": [
-        "За подредба на веб страницата",
-        "За осъществяване на логиката на програмата",
-        "За съхранение на данни",
-        "За управление на сървъра"
+        "int",
+        "decimal",
+        "string",
+        "boolean"
       ],
-      "correct": 0,
+      "correct": 1,
       "difficulty": 2
     },
     {

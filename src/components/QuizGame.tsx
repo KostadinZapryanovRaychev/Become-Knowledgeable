@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import '../styles/QuizGame.css'
 import quizData from '../data/questions.json'
 import QuestionCard from './QuestionCard'
@@ -42,16 +42,6 @@ export default function QuizGame({ onEnd, playerName }: QuizGameProps) {
   const [showPhoneResult, setShowPhoneResult] = useState(false)
 
   const currentQuestion: Question = quizData.questions[currentLevel]
-
-  useEffect(() => {
-    const audio = new Audio('data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEAQB8AAAB9AAACABAAZGF0YQIAAAAAAA==')
-    audio.loop = true
-    audio.volume = 0.3
-    audio.play().catch(() => {})
-    return () => {
-      audio.pause()
-    }
-  }, [])
 
   const handleFiftyFifty = () => {
     if (!lifelines.fifty) return
@@ -122,6 +112,8 @@ export default function QuizGame({ onEnd, playerName }: QuizGameProps) {
       }, 1500)
     } else {
       setMessage('Неправилно!')
+      const finalScore = currentLevel < 5 ? 2.0 : score
+      setScore(finalScore)
       setGameOver(true)
     }
   }
